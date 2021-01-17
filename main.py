@@ -35,7 +35,7 @@ class agentModel:
         consumerSample.index = producerSample.index
 
 
-        #makes sale if the amount the consumer is willing to pay us greater than or equal to the price
+        #makes sale if the amount the consumer is willing to pay is greater than or equal to the price
         s = consumerSample["maxPrice"].ge(producerSample["price"])
 
         #calculate surplus
@@ -53,9 +53,6 @@ class agentModel:
         
         #update values
         self.producers.update(producerSample)
-    
-    def sale(self, row):
-        print(row)
 
 
 
